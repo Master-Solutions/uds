@@ -1,0 +1,46 @@
+{
+  "name": "uds-context",
+  "version": "0.0.0",
+  "description": "Basis of Univrese",
+  "author": "x3mka <dboltrushko@cloudnexa.com>",
+  "homepage": "https://github.com/Master-Solutions/uds#readme",
+  "license": "MIT",
+  "main": "src/index.js",
+  "directories": {
+    "lib": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Master-Solutions/uds.git"
+  },
+  "scripts": {
+    "test": "jest  --coverage",
+    "test:watch": "jest --watch --coverage"
+  },
+  "bugs": {
+    "url": "https://github.com/Master-Solutions/uds/issues"
+  },
+  "dependencies": {
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.3.4",
+    "jest": "^24.7.1"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  }
+}
