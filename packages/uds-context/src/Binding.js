@@ -61,7 +61,7 @@ class Binding {
       return new ConstantValueProvider(this.options.value);
     if (this.type === BindingType.FACTORY_FUNCTION)
       return new FactoryFnValueProvider(this.options.factoryFn);
-    throw new Error(`Cannot instantiate value provider for binding ${this.key}`);
+    throw new Error(`Cannot instantiate value provider for binding '${this.key}'`);
   }
 
   // returns value or promise

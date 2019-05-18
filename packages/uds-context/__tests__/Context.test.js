@@ -224,29 +224,56 @@ describe('Context', () => {
 
     });
 
-    describe('#getSync', () => {
+    describe('#createBoundObject', () => {
+
+      it('passes context as the first param', () => {
+        const C = class {
+          constructor(ctx) {
+            this.ctx = ctx;
+          }
+        };
+        const instance = ctx.createBoundObject(C);
+        expect(instance.ctx).toBe(ctx);
+      });
+
+      it('passes other args', () => {
+        const C = class {
+          constructor(ctx, a1, a2) {
+            this.ctx = ctx;
+            this.a1 = a1;
+            this.a2 = a2;
+          }
+        };
+        const instance = ctx.createBoundObject(C, 1, 2);
+        expect(instance.a1).toBe(1);
+        expect(instance.a2).toBe(2);
+      });
+
+    });
+
+    describe('#get', () => {
 
       it('returns the value immediately when the binding is sync', () => {
         ctx.bind('foo').to('bar');
-        expect(ctx.getSync('foo')).toBe('bar');
+        expect(ctx.get('foo')).toBe('bar');
       });
 
       it('returns undefined if an optional binding is not found', () => {
-        expect(ctx.getSync('unknown-key', {optional: true})).toBeUndefined();
+        expect(ctx.get('unknown-key', {optional: true})).toBeUndefined();
       });
 
       it('returns transient value', () => {
         let count = 0;
         ctx.bind('foo').toFactoryFn(() => count++).transient();
-        expect(ctx.getSync('foo')).toBe(0);
-        expect(ctx.getSync('foo')).toBe(1);
+        expect(ctx.get('foo')).toBe(0);
+        expect(ctx.get('foo')).toBe(1);
       });
 
       it('returns singleton value', () => {
         let count = 0;
         ctx.bind('foo').toFactoryFn(() => count++).singleton();
-        expect(ctx.getSync('foo')).toBe(0);
-        expect(ctx.getSync('foo')).toBe(0);
+        expect(ctx.get('foo')).toBe(0);
+        expect(ctx.get('foo')).toBe(0);
       });
 
     });

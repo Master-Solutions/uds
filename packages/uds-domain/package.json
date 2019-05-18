@@ -1,13 +1,13 @@
 {
-  "name": "uds-context",
+  "name": "uds-domain",
   "version": "0.0.1",
-  "description": "Basis of Univrese",
+  "description": "UDS Domain",
   "author": "x3mka <dboltrushko@cloudnexa.com>",
   "homepage": "https://github.com/Master-Solutions/uds#readme",
-  "license": "MIT",
+  "license": "ISC",
   "main": "src/index.js",
   "directories": {
-    "lib": "src",
+    "src": "src",
     "test": "__tests__"
   },
   "files": [
@@ -25,7 +25,7 @@
     "url": "https://github.com/Master-Solutions/uds/issues"
   },
   "dependencies": {
-    "uuid": "^3.3.2"
+    "uds-context": "^0.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",

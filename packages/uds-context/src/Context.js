@@ -106,7 +106,11 @@ class Context {
     return binding;
   }
 
-  getSync(key, options = {}) {
+  createBoundObject(c, ...rest) {
+    return new c(this, ...rest);
+  }
+
+  get(key, options = {}) {
     const binding = this.getBinding(key, options);
     return binding && binding.getValue();
   }

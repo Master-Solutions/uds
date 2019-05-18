@@ -1,0 +1,56 @@
+{
+  "name": "uds-react-theme",
+  "version": "0.0.0",
+  "description": "Main UDS React Components Library",
+  "author": "x3mka <bdimonik@gmail.com>",
+  "homepage": "https://github.com/Master-Solutions/uds#readme",
+  "license": "ISC",
+  "main": "src/index.js",
+  "directories": {
+    "src": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Master-Solutions/uds.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "cypress:open": "npx cypress open",
+    "cypress:cli": "npx cypress run --spec cypress/integration/bootstrap/buttons.spec.js --browser chrome"
+  },
+  "bugs": {
+    "url": "https://github.com/Master-Solutions/uds/issues"
+  },
+  "peerDependencies": {
+    "react": ">= 16.8",
+    "react-dom": ">= 16.8"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-actions": "^5.0.11",
+    "@storybook/addon-knobs": "^5.0.11",
+    "@storybook/addon-links": "^5.0.11",
+    "@storybook/addon-storysource": "^5.0.11",
+    "@storybook/addon-viewport": "^5.0.11",
+    "@storybook/addons": "^5.0.11",
+    "@storybook/react": "^5.0.11",
+    "@storybook/theming": "^5.0.11",
+    "babel-loader": "^8.0.6",
+    "cypress": "^3.3.0",
+    "jest": "24.7.1",
+    "node-sass": "^4.12.0",
+    "node-sass-utils": "^1.1.2",
+    "sass-loader": "^7.1.0"
+  },
+  "dependencies": {
+    "reactstrap": "^8.0.0"
+  }
+}
