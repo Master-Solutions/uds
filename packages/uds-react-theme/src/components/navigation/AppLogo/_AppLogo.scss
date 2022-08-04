@@ -1,0 +1,16 @@
+.AppLogo {
+  height: $app-header-height;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  order: 2;
+
+  @include media-breakpoint-up(lg) {
+    width: $app-sidebar-width;
+    order: 0;
+  }
+
+  img {
+    height: $app-header-height - 14px;
+  }
+}

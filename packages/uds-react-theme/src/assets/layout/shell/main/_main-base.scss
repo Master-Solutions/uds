@@ -1,0 +1,28 @@
+// Main Base
+
+.shell-main {
+  z-index: 8;
+  position: relative;
+  display: flex;
+
+  .shell-main__outer {
+    flex: 1;
+    flex-direction: column;
+    display: flex;
+    z-index: 12;
+    width: 1px;
+  }
+
+  .shell-main__inner {
+    padding: $grid-gutter-width $grid-gutter-width 0;
+    flex: 1;
+  }
+}
+
+
+// Themes
+
+// @import "themes/main-white";
+// @import "themes/main-gray";
+//@import "themes/main-inverted-blue";
+//@import "themes/main-inverted-black";

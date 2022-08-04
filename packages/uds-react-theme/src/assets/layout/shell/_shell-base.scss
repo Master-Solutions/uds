@@ -1,0 +1,27 @@
+$shell-container-bg: #f1f4f6;
+$shell-sidebar-bg: #ffffff;
+$shell-header-bg: #fafbfc;
+$shell-header-logo-bg: rgba(255, 255, 255, .9);
+
+// Content
+
+.shell-container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+  background: $shell-container-bg;
+}
+
+.shell-sidebar {
+  background: $shell-sidebar-bg;
+}
+
+.shell-footer .shell-footer__inner,
+.shell-header {
+  background: $shell-header-bg;
+}
+
+@import "header/header-base";
+@import "sidebar/sidebar-base";
+@import "main/main-base";

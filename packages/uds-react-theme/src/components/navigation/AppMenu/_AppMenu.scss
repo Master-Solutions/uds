@@ -1,0 +1,11 @@
+.AppMenu {
+  height: $app-header-height;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  order: 3;
+
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+}

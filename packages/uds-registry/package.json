@@ -1,0 +1,35 @@
+{
+  "name": "uds-registry",
+  "version": "0.0.1",
+  "description": "Sample implementation of features registry with smallish CDN",
+  "author": "x3mka <dboltrushko@cloudnexa.com>",
+  "homepage": "https://github.com/Master-Solutions/uds#readme",
+  "license": "MIT",
+  "main": "src/index.js",
+  "directories": {
+    "lib": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Master-Solutions/uds.git"
+  },
+  "scripts": {
+    "start": "http-server ./sample-store"
+  },
+  "bugs": {
+    "url": "https://github.com/Master-Solutions/uds/issues"
+  },
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.3.4",
+    "babel-loader": "^8.0.5",
+    "http-server": "^0.11.1"
+  }
+}

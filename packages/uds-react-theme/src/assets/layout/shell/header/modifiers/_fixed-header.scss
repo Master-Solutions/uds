@@ -1,0 +1,25 @@
+// Fixed Header
+
+.fixed-header {
+  .shell-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+
+    .shell-header__logo {
+      visibility: visible;
+    }
+  }
+
+  .shell-main {
+    padding-top: $shell-header-height;
+  }
+
+  &:not(.fixed-sidebar):not(.closed-sidebar) {
+    .app-sidebar {
+      .app-header__logo {
+        visibility: hidden;
+      }
+    }
+  }
+}
